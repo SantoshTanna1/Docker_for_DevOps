@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  web:
+    image: nginx:latest
+    deploy:
+      replicas: 5
+      placement:
+        constraints:
+          -node.labels.region==east-1-d
